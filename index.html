@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Cadastro de Alunos</h1>
+    </header>
+    <nav>
+        <div>
+            <button id="open-register-modal" onclick="addStudent()">Cadastrar Novo Aluno</button>
+            <button id="open-search-modal" onclick="showSearchBar()"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div id="search-bar-radios" class="search-bar-radios">
+            <label for="radio-ra">R.A</label>
+            <input type="radio" name="radio-ra" id="radio-ra">
+            <label for="radio-ra">Nome</label>
+            <input type="radio" name="radio-nome" id="radio-nome">
+            <label for="radio-ra">Cidade</label>
+            <input type="radio" name="radio-cidade" id="radio-cidade">
+            <label for="radio-ra">Estado</label>
+            <input type="radio" name="radio-estado" id="radio-estado">
+            <label for="radio-ra">Curso</label>
+            <input type="radio" name="radio-curso" id="radio-curso">
+        </div>
+        <div id="search-bar" class="search-bar">
+            <input type="search">
+            <button id="go-search"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            <button id="close-search" onclick="hideSearchBar()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </nav>
+    <main>
+        <table id="tb-students">
+            <thead>
+                <tr>
+                    <th>R.A <i class="fa-solid fa-arrow-up-1-9" onclick="sortByRas()"></i></th>
+                    <th>NOME <i class="fa-solid fa-arrow-up-a-z" onclick="sortByNames()"></i></th>
+                    <th>CIDADE <i class="fa-solid fa-arrow-up-a-z" onclick="sortByCities()"></i></th>
+                    <th>ESTADO <i class="fa-solid fa-arrow-up-a-z" onclick="sortByStates()"></i></th>
+                    <th>CURSO <i class="fa-solid fa-arrow-up-a-z" onclick="sortByCourses()"></i></th>
+                    <th>AÇÃO</th>
+                </tr>
+            <tbody id="tb-students-list">
+            </tbody>
+            </thead>
+        </table>
+    </main>
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <div class="head-form">
+                <h2>Cadastrar Aluno</h2>
+                <span class="close" onclick="hideModal()"><i class="fa-solid fa-ban"></i></span>
+            </div>
+            <form id="student-form" class="modal-form" onsubmit="return false">
+                <label for="ra">R.A*</label>
+                <input type="text" id="ra" name="ra" placeholder="Digite o RA do Aluno">
+                <label for="nome">NOME*</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o Nome do Aluno">
+                <label for="cidade">CIDADE*</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Digite a Cidade do Aluno">
+                <label for="estado">ESTADO*</label>
+                <input type="text" id="estado" name="estado" placeholder="Digite o Estado do Aluno">
+                <label for="curso">CURSO*</label>
+                <input type="text" id="curso" name="curso" placeholder="Digite o Curso do Aluno">
+                <div class="buttons-form">
+                    <button onclick="saveRegister()">Salvar</button>
+                    <button onclick="hideModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
