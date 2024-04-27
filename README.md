@@ -1,1 +1,1 @@
-"# Atividade03LogProgGTI" 
+Atividade realizada para o curso de GTI. A proposta foi estruturar uma página HTML com CSS, utilizando o flexbox para organizar os elementos, além de tabelas. Foi desenvolvido um CRUD para cadastro de alunos, utilizando um banco de dados em memória.
