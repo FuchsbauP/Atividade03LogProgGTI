@@ -22,6 +22,8 @@ nav{
     align-items: center;
     justify-content: center;
     margin: 10px 0px 10px 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #888;
     /* gap: 20px */
 }
 
@@ -96,6 +98,14 @@ table thead{
 
 table tbody {
     display: table-row-group;
+}
+
+table tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: #ffffff;
 }
 
 table tr{
