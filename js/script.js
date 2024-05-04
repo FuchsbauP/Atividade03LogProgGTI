@@ -23,15 +23,13 @@ function clearModalInputs() {
 function showSearchBar() {
     let searchBar = document.getElementById('search-bar')
     searchBar.style.display = "flex"
-    let searchBarRadios = document.getElementById('search-bar-radios')
-    searchBarRadios.style.display = "flex"
+    showStudentsList()
 }
 
 function hideSearchBar() {
     let searchBar = document.getElementById('search-bar')
     searchBar.style.display = "none"
-    let searchBarRadios = document.getElementById('search-bar-radios')
-    searchBarRadios.style.display = "none"
+    showStudentsList()
 }
 
 function addStudent() {
@@ -196,4 +194,37 @@ function sortByCourses() {
         return 0
     })
     showStudentsList()
+}
+
+function searchRegister() {
+    //Capturar valor da busca
+    let inputSearch = document.getElementById('input-search-bar').value.toUpperCase()
+    //Capturar a tabela
+    let tbody = document.getElementById('tb-students-list')
+    //Capturar todas as linhas da tabela
+    let tr = tbody.getElementsByTagName('tr')
+
+    //Loop para percorrer toas as linhas da tabela e ocultar as linhas que não correspondem a pesquisa
+    for (let i = 0; i < tr.length; i++) {
+        let td = tr[i].getElementsByTagName('td')
+        let found = false
+        // Loop para percorrer toas as células da linha selecionada
+        for (j = 0; j < td.length; j++) {
+            let cell = td[j]
+            if (cell) {
+                let textValue = cell.textContent || cell.innerText
+                if (textValue.toUpperCase().indexOf(inputSearch) > -1) {
+                    found = true
+                    break
+                }
+            }
+        }
+        if (found) {
+            tr[i].style.display = ''
+        }
+        else {
+            tr[i].style.display = 'none'
+        }
+    }
+
 }
