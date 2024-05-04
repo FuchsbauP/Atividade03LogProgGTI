@@ -55,14 +55,6 @@ nav button:hover{
     gap: 5px;
 }
 
-.search-bar-radios{
-    display: none;
-    flex-direction: row;
-    margin-top: 5px;
-    gap: 5px;
-    font-size: 13px;
-}
-
 .search-bar input{
     flex: 1;
     width: 235px;
@@ -76,6 +68,12 @@ nav button:hover{
 #close-search{
     font-size: 14px;
     max-width: 30px;
+}
+
+#ra:disabled{
+    background-color: rgba(31, 147, 255, 0.267);
+    color: #000;
+    font-weight: bold;
 }
 
 main{
@@ -221,4 +219,6 @@ thead tr .fa-solid:hover{
     color: #024c91;
     cursor: pointer;
     text-decoration: none;
+    background-color: #0683f84b;
+    border-radius: 2px;
 }

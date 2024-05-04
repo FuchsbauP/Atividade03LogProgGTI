@@ -75,6 +75,7 @@ function saveRegister() {
                 mensagem += campo + '\n'
             }
             alert(mensagem)
+            return showModal()
         }
         else {
             let aluno = {
@@ -97,6 +98,7 @@ function saveRegister() {
     alunoAlterado = null
     hideModal()
     showStudentsList()
+    showModal()
 }
 
 function showStudentsList() {
@@ -220,7 +222,7 @@ function searchRegister() {
             }
         }
         if (found) {
-            tr[i].style.display = ''
+            tr[i].style.display = 'table-row'
         }
         else {
             tr[i].style.display = 'none'
