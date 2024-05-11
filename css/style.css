@@ -118,6 +118,32 @@ table td{
     text-align: center;
 }
 
+#edit-btn,
+#delete-btn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#edit-btn{
+    background-color:#0683f8;
+}
+
+#delete-btn{
+    background-color:#f80606;
+}
+
+#edit-btn:hover{
+    background-color: #024c91;
+}
+
+#delete-btn:hover{
+    background-color: #920404;
+}
+
 .modal{
     display: none;
     position: fixed;

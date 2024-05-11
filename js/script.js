@@ -114,8 +114,8 @@ function showStudentsList() {
                     <td id="estado-student">${alunos[i].estado}</td>
                     <td id="curso-student">${alunos[i].curso}</td>
                     <td>
-                        <button id="edit-btn" onclick="editRegister('${alunos[i].ra}')">Alterar</button>
-                        <button id="delete-btn" onclick="deleteRegister('${alunos[i].ra}')">Excluir</button>
+                        <button id="edit-btn" onclick="editRegister('${alunos[i].ra}')"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button id="delete-btn" onclick="deleteRegister('${alunos[i].ra}')"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>`
         let tr = document.createElement('tr')
